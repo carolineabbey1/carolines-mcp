@@ -1,4 +1,7 @@
 This project is a simple MCP (Model Context Protocol) server built for Claude Code using Node.js and the @modelcontextprotocol/sdk. It provides two tools: start_timer and stop_timer. The start_timer tool begins tracking time for a named task and saves the start time in a JSON file located at ~/mcp-data/timers.json. The stop_timer tool reads the stored start time, calculates elapsed seconds, removes the task from storage, and returns a structured object containing timing details.
-Installation Instructions: 1. Run npm install. 2. Register the server with claude mcp add --transport stdio carolines-mcp -- node /full/path/to/index.js. 3. Restart claude code and use /mcp to confirm connection.
+
+Installation Instructions: 1. Run npm install. 2. Register the server with "claude mcp add --transport stdio carolines-mcp -- node /full/path/to/index.js". 3. Restart claude code and use /mcp to confirm connection.
+
 Example Usage: 1. Tracking assignment use time. Starting when the user starts an assignment and stopping when the student is finished. 2. Comparing task efficiency, a user could track the timing of two separate tasks to see which was more efficient.
+
 Limitations: timers are stored locally and will reset if the JSON file is deleted.
